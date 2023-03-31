@@ -70,7 +70,6 @@ import CoolNameComponent from './components/CoolNameComponent.vue';
 
 header {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
@@ -99,5 +98,16 @@ nav *:hover {
 nav *.router-link-exact-active {
   text-decoration: underline;
   color: #50C878;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
 }
 </style>
