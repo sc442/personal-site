@@ -8,8 +8,7 @@
 
 import { ref, computed, onMounted } from "vue";
 
-const literalName = "Seungwoo Choi";
-const displayName = ref<string>("");
+const displayName = ref<string>("Seungwoo Choi");
 
 const isBlinking = ref<boolean>(false);
 onMounted(() => {
@@ -53,6 +52,8 @@ async function alternateTypeEffect() {
 }
 
 async function typeEffectEnglish() {
+  const literalName = "Seungwoo Choi";
+
   for (let c of literalName) {
     displayName.value = displayName.value.concat(c);
     await delay(randomInteger(30, 50));
@@ -64,10 +65,11 @@ async function typeEffectEnglish() {
  * I don't feel like reinventing the Korean keyboard...
  */
 async function typeEffectKorean() {
-  var sequence1 = ['ㅊ', '초', '최'];
-  var sequence2 = ['ㅅ', '스', '승'];
-  var sequence3 = ['ㅇ', '우'];
-  var sequences = [sequence1, sequence2, sequence3];
+  var sequences = [
+    ['ㅊ', '초', '최'], 
+    ['ㅅ', '스', '승'], 
+    ['ㅇ', '우'],
+  ];
 
   for (let i = 0; i < sequences.length; i++) {
     let current = sequences[i];

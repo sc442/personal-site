@@ -2,7 +2,7 @@
   <header>
     <CoolNameComponent />
     <nav>
-      <router-link to="/about">About</router-link>
+      <router-link to="/bio">Bio</router-link>
       <router-link to="/obamahedron">Obamahedron</router-link>
     </nav>
   </header>
