@@ -1,30 +1,84 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
+  <header>
+    <CoolNameComponent />
+    <nav>
+      <router-link to="/about">About</router-link>
+      <router-link to="/obamahedron">Obamahedron</router-link>
+    </nav>
+  </header>
   <router-view/>
 </template>
 
+<script setup lang="ts">
+
+import CoolNameComponent from './components/CoolNameComponent.vue';
+
+
+</script>
+
 <style>
+
+@font-face {
+  font-family: Rubik-Light;
+  src: url('~@/assets/fonts/Rubik-Light.ttf');
+}
+@font-face {
+  font-family: Rubik-Medium;
+  src: url('~@/assets/fonts/Rubik-Medium.ttf');
+}
+@font-face {
+  font-family: Rubik-Bold;
+  src: url('~@/assets/fonts/Rubik-Bold.ttf')
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rubik-Light, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+  color: #576065;
+  background-color: whitesmoke;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav {
   padding: 30px;
+  font-size: 20px;
+
+  display: flex;
+  gap: 100px;
+
+  margin-right: 100px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+nav * {
+  text-decoration: none;
+  color: #576065;
+
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+nav *:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+nav *.router-link-exact-active {
+  text-decoration: underline;
+  color: #50C878;
 }
 </style>
