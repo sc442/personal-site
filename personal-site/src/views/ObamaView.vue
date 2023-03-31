@@ -1,6 +1,7 @@
 <template>
   <div class="center">
     <img src="@/assets/Obamahedron.jpeg">
+
   </div>
 </template>
 
@@ -20,5 +21,13 @@ export default defineComponent({
   width: 100%;
 
   align-items: center;
+  justify-content: center;
 }
+
+img:hover {
+  scale: 2;
+  transition: scale 0.5s;
+}
+
+
 </style>

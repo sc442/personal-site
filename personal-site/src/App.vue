@@ -4,10 +4,13 @@
       <CoolNameComponent />
       <nav>
         <router-link to="/bio">Bio</router-link>
+        <router-link to="/projects">Projects</router-link>
         <router-link to="/obamahedron">Obamahedron</router-link>
       </nav>
     </header>
-    <router-view />
+    <div>
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -49,6 +52,8 @@ import CoolNameComponent from './components/CoolNameComponent.vue';
 
   padding-left: 20px;
   padding-right: 20px;
+  
+  font-size: 18px;
 }
 
 .page {
