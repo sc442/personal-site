@@ -52,7 +52,6 @@ async function alternateTypeEffect() {
   isTyping.value = false;
 }
 
-
 async function typeEffectEnglish() {
   for (let c of literalName) {
     displayName.value = displayName.value.concat(c);
@@ -60,6 +59,10 @@ async function typeEffectEnglish() {
   }
 }
 
+/**
+ * I'm sorry, I cheated with this effect :) 
+ * I don't feel like reinventing the Korean keyboard...
+ */
 async function typeEffectKorean() {
   var sequence1 = ['ㅊ', '초', '최'];
   var sequence2 = ['ㅅ', '스', '승'];
@@ -83,15 +86,13 @@ async function eraseEffect() {
   }
 }
   
-
 </script>
 
 <style>
 
 h1 {
   font-size: 40;
-  height: 100px;
-  width: 1000px;
+  min-width: 30%;
   cursor: default;
 }
 
