@@ -1,5 +1,5 @@
 <template>
-  <h1 @mouseover="typeEffect">
+  <h1 @mouseover="typeEffect" @mouseleave="eraseEffect">
     {{ displayName }}{{ blinkingBar }}
   </h1>
 </template>
@@ -33,6 +33,7 @@ function randomInteger(min: number, max: number): number {
 
 const isTyping = ref<boolean>(false);
 const isFinished = ref<boolean>(false);
+
 async function typeEffect() {
   if (isTyping.value || isFinished.value ) return;
 
@@ -46,10 +47,18 @@ async function typeEffect() {
   isFinished.value = true;
 }
 
-// function eraseEffect(): void {
+async function eraseEffect() {
+  if (isTyping.value || !isFinished.value ) return;
 
-// }
+  isTyping.value = true;
+  while(displayName.value) {
+    displayName.value = displayName.value.substring(0, displayName.value.length - 1);
+    await delay(30);
+  }
 
+  isTyping.value = false;
+  isFinished.value = false;
+}
 </script>
 
 <style>
