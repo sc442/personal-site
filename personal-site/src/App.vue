@@ -35,6 +35,12 @@ import CoolNameComponent from './components/CoolNameComponent.vue';
   font-family: Rubik-Bold;
   src: url('~@/assets/fonts/Rubik-Bold.ttf')
 }
+@font-face {
+  font-family: NanumGothic;
+  src: url('~@/assets/fonts/NanumGothic-Regular.ttf')
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -43,7 +49,7 @@ import CoolNameComponent from './components/CoolNameComponent.vue';
 }
 
 #app {
-  font-family: Rubik-Light, Helvetica, Arial, sans-serif;
+  font-family: Rubik-Light, NanumGothic, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
