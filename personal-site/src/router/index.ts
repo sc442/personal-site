@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/obamahedron',
     name: 'Obamahedron',
-    component: () => import('@/views/HomeView.vue')
+    component: () => import('@/views/ObamaView.vue')
   },
   {
     path: "/:catchAll(.*)",

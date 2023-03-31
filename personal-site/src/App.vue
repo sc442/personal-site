@@ -1,12 +1,14 @@
 <template>
-  <header>
-    <CoolNameComponent />
-    <nav>
-      <router-link to="/bio">Bio</router-link>
-      <router-link to="/obamahedron">Obamahedron</router-link>
-    </nav>
-  </header>
-  <router-view/>
+  <div class="page">
+    <header>
+      <CoolNameComponent />
+      <nav>
+        <router-link to="/bio">Bio</router-link>
+        <router-link to="/obamahedron">Obamahedron</router-link>
+      </nav>
+    </header>
+    <router-view />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -47,6 +49,12 @@ import CoolNameComponent from './components/CoolNameComponent.vue';
 
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header {
