@@ -24,6 +24,11 @@ export default defineComponent({
   justify-content: center;
 }
 
+img {
+  height: 200px;
+  margin-top: 200px;
+}
+
 img:hover {
   scale: 2;
   transition: scale 0.5s;
